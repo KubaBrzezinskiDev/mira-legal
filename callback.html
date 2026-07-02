@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MIRA - Authorization Callback</title>
+</head>
+<body style="font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px;">
+
+<h1>Authorization complete</h1>
+<p>Copy the code below and paste it into the sync script:</p>
+<pre id="code" style="background: #eee; padding: 15px; word-break: break-all;"></pre>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById('code').textContent = params.get('code') || 'No code found in URL - check the address bar.';
+</script>
+
+</body>
+</html>
